@@ -1,0 +1,11 @@
+{
+  "files": [
+    "ALE10619_CHI.csv", "ALE10619_REL.csv", "ALE20015_CHI.csv", "ALE20015_REL.csv",
+    "ALE20616_CHI.csv", "ALE20616_MOT.csv", "ALE20619_CHI.csv", "ALE20619_REL.csv",
+    "ANA30014a_CHI.csv", "ANA30014a_MOT.csv", "ANA30614_CHI.csv", "ANA30614_MOT.csv",
+    "ANA40027a_CHI.csv", "ANA40027a_MOT.csv", "GAB10600_CHI.csv", "GAB10600_MOT.csv",
+    "GAB10619_CHI.csv", "GAB10619_MOT.csv", "GAB20026a_CHI.csv", "GAB20026a_MOT.csv",
+    "MAT30023a_CHA.csv", "MAT30023a_MOT.csv", "MAT30620d_CHI.csv", "MAT30620d_MOT.csv",
+    "MAT40121_CHI.csv", "MAT40121_MOT.csv", "MAT40123_CHI.csv", "MAT40123_MOT.csv"
+  ]
+}
