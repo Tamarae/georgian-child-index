@@ -2,10 +2,11 @@
 name: Deploy React App to GitHub Pages
 
 # Controls when the action will run. 
-# This workflow runs on pushes to the 'main' branch.
 on:
   push:
     branches: [ "main" ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,37 +25,37 @@ jobs:
     steps:
       # 1. Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # <-- UPDATED from v3 to v4
 
       # 2. Sets up Node.js for use in our workflow
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4  # <-- UPDATED from v3 to v4
         with:
-          node-version: '18' # Use a recent LTS version of Node.js
+          node-version: '18'
+          cache: 'npm' # Add caching for faster installs
 
       # 3. Installs the project dependencies
       - name: Install dependencies
         run: npm install
 
       # 4. Builds the React app for production
-      #    We add a PUBLIC_URL environment variable to ensure all asset paths are correct
       - name: Build
         run: npm run build
         env:
+          # This variable is needed for Create React App to build correct asset paths
           PUBLIC_URL: /${{ github.event.repository.name }}
 
       # 5. Configures GitHub Pages for the deployment
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4 # <-- UPDATED from v3 to v4
       
       # 6. Uploads the built application as an artifact
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3 # <-- UPDATED from v2 to v3
         with:
-          # Upload the 'build' folder which contains the production app
           path: './build'
 
       # 7. Deploys the artifact to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4 # <-- UPDATED from v2 to v4
