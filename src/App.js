@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Papa from 'papaparse';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { Search, BookOpen, TrendingUp, ChevronRight, X, Loader, FileText, ArrowUpDown, BarChart2, PieChart } from 'lucide-react';
+import { Search, BookOpen, ChevronRight, X, Loader, FileText, ArrowUpDown, BarChart2, PieChart } from 'lucide-react';
 
 // ===================================================================================
 // UTILITY FUNCTIONS
